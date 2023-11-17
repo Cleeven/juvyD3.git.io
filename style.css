@@ -1,0 +1,67 @@
+/*essaie*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#titre {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    height: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr.pale {
+    background-color: #f9f9f9;
+}
+
+tr.foncer {
+    background-color: #e5e5e5;
+}
+
+button {
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+div[id^="j"] {
+    font-weight: bold;
+}
+
+#stats {
+    width: 80%;
+    margin: 0 auto;
+    max-height: 500px; /* Ajustez la hauteur maximale selon vos préférences */
+    overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
+    overflow-x: auto; /* Ajoute une barre de défilement horizontale si nécessaire */
+}
+
+
+
