@@ -1,10 +1,12 @@
+// Obtenir le nom de l'équipe adverse
 let equipe = prompt("Quelle est le nom de l'équipe contre laquelle vous avez joué?");
 let nomEquipe = document.getElementById('nomEquipe');
 let nEquipe = document.getElementById('nEquipe');
-nomEquipe.append(equipe);
+// ajouter le nom aux elements HTML
+nomEquipe.append(equipe); 
 nEquipe.innerHTML = equipe;
 
-
+// obtenir la date du match
 let demandeDate = prompt("Le match a-t-il eu lieu aujourd'hui ? Si oui, veuillez entrer 'y'. Sinon, veuillez entrer la date au format 'dd/mm/yyyy'.");
 if (demandeDate === "Y" || demandeDate === "y") {
     // Obtenir la date actuelle
@@ -33,8 +35,8 @@ if (demandeDate === "Y" || demandeDate === "y") {
     document.getElementById('date').innerHTML = dateFormatee;
 }
 
-
-
+/* variables pour les statisques, le 12 est pour le nombre de joueurs et on met des 0 a chaques 
+statistique de chaques joueurs*/
 let _2PtsReussisj = Array(12).fill(0);
 let _2PtsTentesj = Array(12).fill(0);
 let _3PtsReussisj = Array(12).fill(0);
@@ -49,6 +51,7 @@ let blkj = Array(12).fill(0);
 let toj = Array(12).fill(0);
 let flsj = Array(12).fill(0);
 
+//Boucle pour ajouter les stats
 for (let i = 1; i <= 12; i++) {
     // AJOUTER 2 POINT REUSSI
     document.getElementById("j" + i + "ajouter2PtsR").onclick = function () {
@@ -301,7 +304,7 @@ for (let i = 1; i <= 12; i++) {
     };
 }
 
-
+// fonction pour calculer l'efficacité, les points et aussi mettre tout les totaux au bonne endroits
 function calculerEfficaciteEtPointJ(indexJoueur) {
 
     let pointTotal = (_2PtsReussisj[indexJoueur - 1] * 2) + (_3PtsReussisj[indexJoueur - 1] * 3) + ftReussisj[indexJoueur - 1];
@@ -319,7 +322,7 @@ function calculerEfficaciteEtPointJ(indexJoueur) {
     calculerTotaux();
 }
 
-
+// fonction pour calculer les totaux et mettre de la couleurs si le total ne respecte pas l'objectifs
 function calculerTotaux(){
     let totalfg = 0;
     let totalfga = 0 ;
@@ -427,6 +430,7 @@ function calculerTotaux(){
    }
 }
 
+// fonction pour la capture d'ecran
 document.addEventListener("DOMContentLoaded", function () {
     // Sélectionnez le bouton de capture d'écran
     var screenshotButton = document.getElementById("screenshotButton");
