@@ -5,7 +5,7 @@ nomEquipe.append(equipe);
 nEquipe.innerHTML = equipe;
 
 
-let demandeDate = prompt("Le match a-t-il eu lieu aujourd'hui ? Si oui, veuillez entrer 'oui'. Sinon, veuillez entrer la date au format 'dd/mm/yyyy'.");
+let demandeDate = prompt("Le match a-t-il eu lieu aujourd'hui ? Si oui, veuillez entrer 'y'. Sinon, veuillez entrer la date au format 'dd/mm/yyyy'.");
 if (demandeDate === "Y" || demandeDate === "y") {
     // Obtenir la date actuelle
     let dateActuelle = new Date();
