@@ -406,13 +406,25 @@ function calculerTotaux(){
    document.getElementById("pts").textContent = totalPts;
 
    let fgPerc = (totalfg/totalfga) * 100;
-   document.getElementById('fgPerc').textContent = fgPerc.toFixed(1) + "%"
+   document.getElementById('fgPerc').textContent = fgPerc.toFixed(1) + "%";
 
    let _3fgPerc = (total3fg/total3fga) * 100;
-   document.getElementById('_3ptsperc').textContent = _3fgPerc.toFixed(1) + "%"
+   document.getElementById('_3ptsperc').textContent = _3fgPerc.toFixed(1) + "%";
 
    let ftPerc = (totalft/totalfta) * 100;
-   document.getElementById('ftPerc').textContent = ftPerc.toFixed(1) + "%"
+   document.getElementById('ftPerc').textContent = ftPerc.toFixed(1) + "%";
+
+   //Mettre en rouge
+   // plus que 10 turnovers
+   if (totalTo >= 10) {
+    document.getElementById("to").classList = "rouge";
+   }
+   //moins que 60% Ft
+   if (ftPerc<60) {
+    document.getElementById('ftPerc').classList = "rouge";
+   } else if (ftPerc>=60) {
+    document.getElementById('ftPerc').classList = "vert";
+   }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
