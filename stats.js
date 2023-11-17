@@ -12,8 +12,6 @@ let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
 let dateFormatee = dateActuelle.toLocaleDateString('fr-FR', options);
 document.getElementById('date').innerHTML = dateFormatee
 
-
-
 let _2PtsReussisj = Array(12).fill(0);
 let _2PtsTentesj = Array(12).fill(0);
 let _3PtsReussisj = Array(12).fill(0);
