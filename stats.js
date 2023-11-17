@@ -1,4 +1,3 @@
-/*
 let equipe = prompt("Quelle est le nom de l'équipe contre laquelle vous avez joué?");
 let nomEquipe = document.getElementById('nomEquipe');
 let nEquipe = document.getElementById('nEquipe');
@@ -12,7 +11,6 @@ let dateActuelle = new Date();
 let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 let dateFormatee = dateActuelle.toLocaleDateString('fr-FR', options);
 document.getElementById('date').innerHTML = dateFormatee
-*/
 
 
 
