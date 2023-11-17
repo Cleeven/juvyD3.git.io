@@ -4,13 +4,36 @@ let nEquipe = document.getElementById('nEquipe');
 nomEquipe.append(equipe);
 nEquipe.innerHTML = equipe;
 
-// Obtenir la date actuelle
-let dateActuelle = new Date();
-        
- // Formater la date
-let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-let dateFormatee = dateActuelle.toLocaleDateString('fr-FR', options);
-document.getElementById('date').innerHTML = dateFormatee
+
+let demandeDate = prompt("Le match a-t-il eu lieu aujourd'hui ? Si oui, veuillez entrer 'oui'. Sinon, veuillez entrer la date au format 'dd/mm/yyyy'.");
+if (demandeDate === "Y" || demandeDate === "y") {
+    // Obtenir la date actuelle
+    let dateActuelle = new Date();
+
+    // Formater la date en "dd/mm/yyyy"
+    let jour = dateActuelle.getDate();
+    let mois = dateActuelle.getMonth() + 1; // Les mois commencent à 0, donc ajoutez 1
+    let annee = dateActuelle.getFullYear();
+
+    // Assurez-vous que le jour et le mois sont toujours sur deux chiffres
+    if (jour < 10) {
+        jour = '0' + jour;
+    }
+
+    if (mois < 10) {
+        mois = '0' + mois;
+    }
+
+    let dateFormatee = `${jour}/${mois}/${annee}`;
+
+    // Mettre à jour l'élément HTML avec la date formatée
+    document.getElementById('date').innerHTML = dateFormatee;
+} else {
+    let dateFormatee = demandeDate
+    document.getElementById('date').innerHTML = dateFormatee;
+}
+
+
 
 let _2PtsReussisj = Array(12).fill(0);
 let _2PtsTentesj = Array(12).fill(0);
