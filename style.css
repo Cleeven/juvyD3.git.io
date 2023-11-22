@@ -9,11 +9,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
-#titre {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-}
+
 
 #stats {
     width: 80%;
@@ -59,3 +55,25 @@ body {
 .vert{
     color: green;
 }
+#titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+}
+
+.gauche {
+    margin-right: 10px; 
+}
+
+.droite {
+    margin-left: 10px;
+}
+

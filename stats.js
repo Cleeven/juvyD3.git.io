@@ -3,7 +3,7 @@ let equipe = prompt("Quelle est le nom de l'équipe contre laquelle vous avez jo
 let nomEquipe = document.getElementById('nomEquipe');
 let nEquipe = document.getElementById('nEquipe');
 // ajouter le nom aux elements HTML
-nomEquipe.append(equipe); 
+nomEquipe.textContent = equipe; 
 nEquipe.innerHTML = equipe;
 
 // obtenir la date du match
