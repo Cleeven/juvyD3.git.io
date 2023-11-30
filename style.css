@@ -27,11 +27,11 @@ body {
     color: #fff;
 }
 
-#stats .pale {
+tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-#stats .foncer {
+tbody tr:nth-child(odd) {
     background-color: #e6e6e6;
 }
 
